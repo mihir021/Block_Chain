@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web3Hub | Concepts</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-logo">⬡ Web3Hub</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a class="active" href="concepts.html">Concepts</a></li>
+      <li><a href="prices.html">Live Prices</a></li>
+      <li><a href="simulator.html">Block Simulator</a></li>
+    </ul>
+    <button class="nav-toggle" onclick="toggleMenu()" aria-label="Open navigation">☰</button>
+  </nav>
+
+  <main class="page concepts-page">
+    <header class="page-header">
+      <h1>Web3 Concepts</h1>
+      <p class="subtitle">Simple side-by-side comparisons for the ideas that show up everywhere in crypto, Ethereum, and Layer 2 ecosystems.</p>
+    </header>
+
+    <article class="concept-card">
+      <div class="side side-a">
+        <h3>Web2</h3>
+        <ul>
+          <li>Centralized platforms</li>
+          <li>Companies own your data</li>
+          <li>Username and password login</li>
+          <li>Can be censored by operators</li>
+        </ul>
+      </div>
+      <div class="vs-badge">VS</div>
+      <div class="side side-b">
+        <h3>Web3</h3>
+        <ul>
+          <li>Decentralized blockchain networks</li>
+          <li>Users own their data and assets</li>
+          <li>Wallet-based identity</li>
+          <li>Designed for censorship resistance</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="concept-card">
+      <div class="side side-a">
+        <h3>Bitcoin</h3>
+        <ul>
+          <li>Digital currency</li>
+          <li>Store of value focus</li>
+          <li>Limited scripting</li>
+          <li>Proof of Work consensus</li>
+        </ul>
+      </div>
+      <div class="vs-badge">VS</div>
+      <div class="side side-b">
+        <h3>Ethereum</h3>
+        <ul>
+          <li>Programmable blockchain</li>
+          <li>Smart contracts</li>
+          <li>DeFi, NFTs, DAOs, and apps</li>
+          <li>Proof of Stake consensus</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="concept-card">
+      <div class="side side-a">
+        <h3>Public Key</h3>
+        <ul>
+          <li>Your wallet address</li>
+          <li>Safe to share publicly</li>
+          <li>Like an email address</li>
+          <li>Used to receive funds</li>
+        </ul>
+      </div>
+      <div class="vs-badge">VS</div>
+      <div class="side side-b">
+        <h3>Private Key</h3>
+        <ul>
+          <li>Secret recovery code</li>
+          <li>Never share it with anyone</li>
+          <li>Signs transactions</li>
+          <li>If lost, funds can be gone forever</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="concept-card">
+      <div class="side side-a">
+        <h3>Traditional Database</h3>
+        <ul>
+          <li>Centralized ownership</li>
+          <li>Editable by administrators</li>
+          <li>Fast reads and writes</li>
+          <li>Single point of failure</li>
+        </ul>
+      </div>
+      <div class="vs-badge">VS</div>
+      <div class="side side-b">
+        <h3>Blockchain</h3>
+        <ul>
+          <li>Decentralized network</li>
+          <li>Immutable transaction history</li>
+          <li>Usually slower than databases</li>
+          <li>No single point of failure</li>
+        </ul>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div><strong>Built by Rathod Mihir</strong><br>Arbitrum Builder Pods - Batch 1</div>
+      <div><a href="https://github.com/mihir021">github.com/mihir021</a><br>© 2026 Web3Hub</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

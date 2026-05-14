@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web3Hub | Layer 2 Learning</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-logo">⬡ Web3Hub</div>
+    <ul class="nav-links">
+      <li><a class="active" href="index.html">Home</a></li>
+      <li><a href="concepts.html">Concepts</a></li>
+      <li><a href="prices.html">Live Prices</a></li>
+      <li><a href="simulator.html">Block Simulator</a></li>
+    </ul>
+    <button class="nav-toggle" onclick="toggleMenu()" aria-label="Open navigation">☰</button>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="hero-badge">Arbitrum Builder Pods - Batch 1</div>
+        <h1>The Future of Ethereum is Layer 2</h1>
+        <p>Layer 2 networks make Ethereum faster and cheaper by moving most activity off the main chain, then posting proof back to Ethereum. Arbitrum is one of the leading Layer 2 rollups, giving builders low fees while keeping Ethereum's security model close by.</p>
+        <p>Think of it as an express lane for Ethereum apps: users get smoother transactions, and the mainnet still acts as the settlement layer.</p>
+        <div class="hero-actions">
+          <a class="btn" href="concepts.html">Explore Concepts →</a>
+          <a class="btn secondary" href="prices.html">See Live Prices →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="page">
+      <h2 class="section-title">Why Layer 2?</h2>
+      <p class="subtitle">The best scaling tools keep Ethereum useful without asking users to wait or overpay for every transaction.</p>
+      <div class="features-grid">
+        <article class="feature-card">
+          <div class="feature-icon">🐢</div>
+          <h3>Ethereum's Bottleneck</h3>
+          <p>Ethereum mainnet is secure and decentralized, but demand can make fees expensive. When the network is busy, simple transactions can become slow or costly.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3>What is Arbitrum?</h3>
+          <p>Arbitrum is a Layer 2 rollup that batches many transactions off-chain. It then posts compressed transaction data back to Ethereum for settlement.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">💸</div>
+          <h3>Real-World Benefit</h3>
+          <p>Users can see dramatically cheaper fees and faster app interactions. Builders can still inherit Ethereum-style security guarantees.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="page">
+      <h2 class="section-title">How It Works</h2>
+      <p class="subtitle">A rollup keeps the user experience quick while Ethereum remains the final source of truth.</p>
+      <div class="flow" aria-label="Layer 2 transaction flow">
+        <article class="step">
+          <div class="step-number">01</div>
+          <h3>You Send</h3>
+          <p>You send a transaction on Arbitrum.</p>
+        </article>
+        <div class="flow-arrow">→</div>
+        <article class="step">
+          <div class="step-number">02</div>
+          <h3>Arbitrum Batches</h3>
+          <p>Arbitrum batches it with others off-chain.</p>
+        </article>
+        <div class="flow-arrow">→</div>
+        <article class="step">
+          <div class="step-number">03</div>
+          <h3>Ethereum Settles</h3>
+          <p>The batch is posted to Ethereum mainnet.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div><strong>Built by Rathod Mihir</strong><br>Arbitrum Builder Pods - Batch 1</div>
+      <div><a href="https://github.com/mihir021">github.com/mihir021</a><br>© 2026 Web3Hub</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

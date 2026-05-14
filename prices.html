@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web3Hub | Live Prices</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="prices.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-logo">⬡ Web3Hub</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="concepts.html">Concepts</a></li>
+      <li><a class="active" href="prices.html">Live Prices</a></li>
+      <li><a href="simulator.html">Block Simulator</a></li>
+    </ul>
+    <button class="nav-toggle" onclick="toggleMenu()" aria-label="Open navigation">☰</button>
+  </nav>
+
+  <main class="prices-main">
+    <div class="prices-header">
+      <div>
+        <h1 class="prices-title">Live Crypto <span class="gradient-text">Prices</span></h1>
+        <p class="prices-subtitle">Real-time data from CoinGecko API</p>
+      </div>
+      <div class="header-right">
+        <p id="last-updated" class="last-updated">--</p>
+        <button id="refresh-btn" onclick="init()">
+          <span id="refresh-icon">🔄</span> Refresh
+        </button>
+      </div>
+    </div>
+
+    <div class="market-bar" id="market-bar">
+      <div class="market-bar-item">
+        <span class="bar-label">Global Market</span>
+        <span class="bar-value" id="bar-market">Loading...</span>
+      </div>
+      <div class="market-bar-item">
+        <span class="bar-label">BTC Dominance</span>
+        <span class="bar-value" id="bar-btc-dom">--</span>
+      </div>
+      <div class="market-bar-item">
+        <span class="bar-label">Active Coins</span>
+        <span class="bar-value" id="bar-coins">--</span>
+      </div>
+      <div class="market-bar-item">
+        <span class="bar-label">24h Volume</span>
+        <span class="bar-value" id="bar-volume">--</span>
+      </div>
+    </div>
+
+    <div class="coin-cards-grid" id="coin-cards-grid">
+      <div class="coin-card loading-card"><div class="skeleton"></div></div>
+      <div class="coin-card loading-card"><div class="skeleton"></div></div>
+      <div class="coin-card loading-card"><div class="skeleton"></div></div>
+      <div class="coin-card loading-card"><div class="skeleton"></div></div>
+    </div>
+
+    <div class="featured-chart-section">
+      <div class="featured-chart-header">
+        <div>
+          <h2 id="chart-title">Select a coin to view chart</h2>
+          <p id="chart-subtitle" class="muted-text">Click any card above</p>
+        </div>
+        <div class="chart-range-btns">
+          <button class="range-btn active" onclick="setRange(7, this)">7D</button>
+          <button class="range-btn" onclick="setRange(14, this)">14D</button>
+          <button class="range-btn" onclick="setRange(30, this)">30D</button>
+        </div>
+      </div>
+      <div class="chart-wrapper">
+        <canvas id="featured-chart"></canvas>
+        <div id="chart-placeholder" class="chart-placeholder">
+          📈 Click a coin card above to load its price chart
+        </div>
+      </div>
+    </div>
+
+    <div class="stats-row" id="stats-row" style="display:none">
+      <div class="stat-card">
+        <p class="stat-label">Market Cap</p>
+        <p class="stat-value" id="stat-mcap">--</p>
+      </div>
+      <div class="stat-card">
+        <p class="stat-label">24h Trading Volume</p>
+        <p class="stat-value" id="stat-vol">--</p>
+      </div>
+      <div class="stat-card">
+        <p class="stat-label">Circulating Supply</p>
+        <p class="stat-value" id="stat-supply">--</p>
+      </div>
+      <div class="stat-card">
+        <p class="stat-label">All Time High</p>
+        <p class="stat-value" id="stat-ath">--</p>
+      </div>
+    </div>
+
+    <div class="notice-box">CoinGecko's public API may rate-limit heavy refreshes. If the cards do not load, wait a moment and refresh again.</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div><strong>Built by Rathod Mihir</strong><br>Arbitrum Builder Pods - Batch 1</div>
+      <div><a href="https://github.com/mihir021">github.com/mihir021</a><br>© 2026 Web3Hub</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="prices.js"></script>
+</body>
+</html>
