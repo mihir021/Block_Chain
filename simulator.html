@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web3Hub | Block Simulator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-logo">⬡ Web3Hub</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="concepts.html">Concepts</a></li>
+      <li><a href="prices.html">Live Prices</a></li>
+      <li><a class="active" href="simulator.html">Block Simulator</a></li>
+    </ul>
+    <button class="nav-toggle" onclick="toggleMenu()" aria-label="Open navigation">☰</button>
+  </nav>
+
+  <main class="page simulator-page">
+    <header class="page-header">
+      <h1>Block Mining Simulator</h1>
+      <p class="subtitle">Mine two connected blocks and watch how changing earlier data breaks the chain until blocks are mined again.</p>
+    </header>
+
+    <div class="blocks-container">
+      <div class="block-card" id="block1-card">
+        <h3>Block #1</h3>
+        <label for="block1-data">Block Data</label>
+        <input id="block1-data" type="text" value="Hello Blockchain">
+
+        <label for="block1-prevhash">Previous Hash</label>
+        <input id="block1-prevhash" type="text" value="0000000000000000" readonly>
+
+        <label for="block1-nonce">Nonce</label>
+        <input id="block1-nonce" type="number" value="0" readonly>
+
+        <label for="block1-hash">Hash Output</label>
+        <input id="block1-hash" type="text" readonly placeholder="Mine to generate...">
+
+        <div class="status" id="block1-status">Not mined yet</div>
+        <button onclick="mineBlock(1)">⛏ Mine Block 1</button>
+      </div>
+
+      <div class="chain-arrow">⛓</div>
+
+      <div class="block-card" id="block2-card">
+        <h3>Block #2</h3>
+        <label for="block2-data">Block Data</label>
+        <input id="block2-data" type="text" value="Second Transaction">
+
+        <label for="block2-prevhash">Previous Hash from Block 1</label>
+        <input id="block2-prevhash" type="text" readonly placeholder="Mine Block 1 first...">
+
+        <label for="block2-nonce">Nonce</label>
+        <input id="block2-nonce" type="number" value="0" readonly>
+
+        <label for="block2-hash">Hash Output</label>
+        <input id="block2-hash" type="text" readonly placeholder="Mine to generate...">
+
+        <div class="status" id="block2-status">Not mined yet</div>
+        <button onclick="mineBlock(2)">⛏ Mine Block 2</button>
+      </div>
+    </div>
+
+    <div class="insight-box">
+      💡 <strong>Try this:</strong> Mine Block 1, then Mine Block 2. Now change Block 1's data - Block 2 immediately turns invalid. This is blockchain immutability in action.
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div><strong>Built by Rathod Mihir</strong><br>Arbitrum Builder Pods - Batch 1</div>
+      <div><a href="https://github.com/mihir021">github.com/mihir021</a><br>© 2026 Web3Hub</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

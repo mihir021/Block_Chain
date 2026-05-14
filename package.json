@@ -1,0 +1,28 @@
+{
+  "name": "block_chain",
+  "version": "1.0.0",
+  "description": "Web3Hub is a 4-page educational Web3 website built with HTML, CSS, and vanilla JavaScript. It explains Layer 2 scaling, compares core blockchain concepts, displays live crypto market data, and includes a simple block mining simulator.",
+  "main": "src/home-app.js",
+  "scripts": {
+    "build:home": "esbuild src/home-app.js --bundle --format=iife --outfile=home-bundle.js --minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mihir021/Block_Chain.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/mihir021/Block_Chain/issues"
+  },
+  "homepage": "https://github.com/mihir021/Block_Chain#readme",
+  "dependencies": {
+    "esbuild": "^0.21.5",
+    "htm": "^3.1.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "three": "^0.160.0"
+  }
+}

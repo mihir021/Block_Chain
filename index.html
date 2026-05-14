@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web3Hub | Arbitrum Layer 2</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/countup.js@2.8.0/dist/countUp.umd.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="home.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-logo home-nav-logo">
+      <svg viewBox="0 0 32 32" aria-hidden="true">
+        <path d="M16 3 27 9.5v13L16 29 5 22.5v-13L16 3Z" fill="none" stroke="currentColor" stroke-width="2.4"/>
+        <path d="M11 20.5 17.5 7.8h3.6l-6.5 12.7H11Zm5.9 3.7 6.5-12.7h3.4l-6.5 12.7h-3.4Z" fill="currentColor"/>
+      </svg>
+      <span>Web3Hub</span>
+    </div>
+    <ul class="nav-links">
+      <li><a class="active" href="index.html">Home</a></li>
+      <li><a href="concepts.html">Concepts</a></li>
+      <li><a href="prices.html">Live Prices</a></li>
+      <li><a href="simulator.html">Block Simulator</a></li>
+    </ul>
+    <button class="nav-toggle" onclick="toggleMenu()" aria-label="Open navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div id="root"></div>
+
+  <script src="script.js"></script>
+  <script src="home-bundle.js"></script>
+</body>
+</html>
