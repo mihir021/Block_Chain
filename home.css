@@ -40,7 +40,7 @@ body {
 
 .home-hero {
   position: relative;
-  min-height: clamp(720px, calc(100vh - 150px), 900px);
+  min-height: clamp(600px, calc(100vh - 130px), 760px);
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -63,37 +63,37 @@ body {
 .hero-grid {
   position: relative;
   z-index: 2;
-  width: min(1180px, calc(100% - 2rem));
+  width: min(1080px, calc(100% - 2rem));
   margin: 0 auto;
-  padding: 5rem 0 4rem;
+  padding: 3.6rem 0 3rem;
   display: grid;
-  grid-template-columns: minmax(0, 1.04fr) minmax(300px, 0.96fr);
+  grid-template-columns: minmax(0, 1.08fr) minmax(280px, 0.82fr);
   align-items: center;
-  gap: 3rem;
+  gap: 2.4rem;
 }
 
 .hero-copy {
-  max-width: 720px;
+  max-width: 650px;
 }
 
 .hero-badge {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.45rem;
   background: rgba(108, 99, 255, 0.15);
   border: 1px solid rgba(108, 99, 255, 0.4);
   border-radius: 50px;
-  padding: 0.48rem 1rem;
-  font-size: 0.78rem;
+  padding: 0.38rem 0.78rem;
+  font-size: 0.68rem;
   color: #b8b3ff;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  margin-bottom: 1.6rem;
+  margin-bottom: 1.25rem;
 }
 
 .badge-dot {
-  width: 7px;
-  height: 7px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
   background: #00d4ff;
   box-shadow: 0 0 12px #00d4ff;
@@ -115,11 +115,11 @@ body {
 
 .hero-title {
   font-family: "Space Grotesk", sans-serif;
-  font-size: clamp(3.1rem, 8.4vw, 6.8rem);
+  font-size: clamp(2.55rem, 5vw, 4.55rem);
   font-weight: 800;
-  line-height: 0.98;
+  line-height: 1.04;
   color: #e8eaf6;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1.15rem;
   letter-spacing: 0;
 }
 
@@ -145,16 +145,16 @@ body {
 
 .hero-sub {
   color: #a8b0de;
-  font-size: 1.08rem;
-  line-height: 1.82;
-  max-width: 620px;
-  margin-bottom: 2.25rem;
+  font-size: 0.98rem;
+  line-height: 1.7;
+  max-width: 580px;
+  margin-bottom: 1.75rem;
 }
 
 .hero-actions,
 .cta-buttons {
   display: flex;
-  gap: 1rem;
+  gap: 0.8rem;
   flex-wrap: wrap;
 }
 
@@ -163,20 +163,20 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.58rem;
-  min-height: 48px;
-  padding: 0.88rem 1.35rem;
-  border-radius: 10px;
-  font-weight: 800;
-  font-size: 0.96rem;
+  gap: 0.5rem;
+  min-height: 42px;
+  padding: 0.68rem 1.05rem;
+  border-radius: 8px;
+  font-weight: 750;
+  font-size: 0.88rem;
   text-decoration: none;
   transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s, background 0.25s;
 }
 
 .btn-primary svg,
 .btn-ghost svg {
-  width: 1.05rem;
-  height: 1.05rem;
+  width: 0.92rem;
+  height: 0.92rem;
 }
 
 .btn-primary {
@@ -212,7 +212,7 @@ body {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   text-decoration: none;
-  margin-top: 2.4rem;
+  margin-top: 2rem;
 }
 
 .scroll-hint svg {
@@ -234,7 +234,7 @@ body {
 
 .hero-visual {
   position: relative;
-  min-height: 460px;
+  min-height: 380px;
   display: grid;
   place-items: center;
   perspective: 1100px;
@@ -243,7 +243,7 @@ body {
 .hero-visual::before {
   content: "";
   position: absolute;
-  width: 86%;
+  width: 76%;
   aspect-ratio: 1;
   border-radius: 50%;
   background: radial-gradient(circle, rgba(108, 99, 255, 0.2), transparent 68%);
@@ -252,15 +252,15 @@ body {
 
 .three-shell {
   position: relative;
-  width: min(100%, 540px);
-  height: 520px;
-  border-radius: 32px;
+  width: min(100%, 430px);
+  height: 410px;
+  border-radius: 24px;
   background:
     radial-gradient(circle at 50% 44%, rgba(0, 212, 255, 0.18), transparent 43%),
     linear-gradient(145deg, rgba(108, 99, 255, 0.12), rgba(0, 212, 255, 0.04));
   transform: rotateX(5deg) rotateY(-8deg);
   transform-style: preserve-3d;
-  filter: drop-shadow(0 32px 90px rgba(0, 212, 255, 0.14));
+  filter: drop-shadow(0 24px 64px rgba(0, 212, 255, 0.12));
   animation: visualFloat 6s ease-in-out infinite alternate;
 }
 
@@ -297,7 +297,7 @@ body {
   z-index: 1;
   display: grid;
   place-items: center;
-  opacity: 0;
+  opacity: 0.92;
   transition: opacity 0.2s;
 }
 
@@ -306,21 +306,43 @@ body {
 }
 
 .fallback-core {
-  width: 44%;
+  position: relative;
+  width: 40%;
   aspect-ratio: 1;
   border-radius: 42% 58% 55% 45%;
-  border: 6px solid #00d4ff;
-  box-shadow: 0 0 42px rgba(0, 212, 255, 0.42), inset 0 0 34px rgba(108, 99, 255, 0.28);
+  border: 5px solid #00d4ff;
+  background:
+    linear-gradient(135deg, rgba(108, 99, 255, 0.22), rgba(0, 212, 255, 0.08)),
+    rgba(13, 15, 26, 0.72);
+  box-shadow:
+    0 0 34px rgba(0, 212, 255, 0.38),
+    inset 0 0 26px rgba(108, 99, 255, 0.25);
   animation: visualFloat 4s ease-in-out infinite alternate;
+}
+
+.fallback-core::before,
+.fallback-core::after {
+  content: "";
+  position: absolute;
+  inset: 20%;
+  border-radius: 50%;
+  border: 2px solid rgba(232, 234, 246, 0.72);
+  transform: rotate(28deg);
+}
+
+.fallback-core::after {
+  inset: 33%;
+  border-color: rgba(108, 99, 255, 0.78);
+  transform: rotate(-32deg);
 }
 
 .three-fallback span {
   position: absolute;
-  width: 14px;
-  height: 14px;
+  width: 11px;
+  height: 11px;
   border-radius: 50%;
-  border: 4px solid #00d4ff;
-  box-shadow: 0 0 22px rgba(0, 212, 255, 0.55);
+  border: 3px solid #00d4ff;
+  box-shadow: 0 0 18px rgba(0, 212, 255, 0.5);
 }
 
 .three-fallback span:nth-child(2) {
@@ -346,26 +368,26 @@ body {
 .scene-chip {
   position: absolute;
   z-index: 3;
-  padding: 0.62rem 0.85rem;
+  padding: 0.48rem 0.68rem;
   border-radius: 999px;
   color: #dfe4ff;
   background: rgba(21, 25, 41, 0.72);
   border: 1px solid rgba(0, 212, 255, 0.24);
-  box-shadow: 0 16px 46px rgba(0, 0, 0, 0.24);
-  font-size: 0.76rem;
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.22);
+  font-size: 0.66rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   backdrop-filter: blur(14px);
 }
 
 .chip-top {
-  top: 5.5rem;
-  left: 2.2rem;
+  top: 4.2rem;
+  left: 1.7rem;
 }
 
 .chip-bottom {
-  right: 1.9rem;
-  bottom: 5.8rem;
+  right: 1.5rem;
+  bottom: 4.4rem;
 }
 
 @keyframes visualFloat {
@@ -387,12 +409,12 @@ body {
   background: linear-gradient(90deg, rgba(108, 99, 255, 0.08), rgba(0, 212, 255, 0.08));
   border-top: 1px solid #1f2640;
   border-bottom: 1px solid #1f2640;
-  padding: 2.6rem 2rem;
+  padding: 1.8rem 2rem;
 }
 
 .stat-item {
   text-align: center;
-  padding: 0 2.6rem;
+  padding: 0 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -401,7 +423,7 @@ body {
 
 .stat-num {
   font-family: "Space Grotesk", sans-serif;
-  font-size: 2.8rem;
+  font-size: 2.1rem;
   font-weight: 800;
   background: linear-gradient(135deg, #6c63ff, #00d4ff);
   -webkit-background-clip: text;
@@ -411,7 +433,7 @@ body {
 }
 
 .stat-unit {
-  font-size: 1.35rem;
+  font-size: 1rem;
   font-weight: 800;
   color: #6c63ff;
   margin-left: 0.16rem;
@@ -419,7 +441,7 @@ body {
 
 .stat-desc {
   color: #7986cb;
-  font-size: 0.78rem;
+  font-size: 0.68rem;
   text-transform: uppercase;
   letter-spacing: 0.06em;
   max-width: 145px;
@@ -428,7 +450,7 @@ body {
 
 .stat-divider {
   width: 1px;
-  height: 64px;
+  height: 46px;
   background: #1f2640;
 }
 
